@@ -22,7 +22,7 @@ class NewsApi
 	{
 		//Returns live top and breaking headlines for a country, specific category in a country, single source, or multiple sources
 		$payload = array();
-
+			
 		//Add Search keyword if provided
 		if (!is_null($q)) {
 			$payload['q'] = $q;
@@ -148,7 +148,7 @@ class NewsApi
 
 	public function getSources($category=null, $language=null, $country=null){
 		//Get News Sources
-
+		$payload = null;
 		//Add category if provided
 		if (!is_null($category)) {
 			if (Helpers::isCategoryValid($category)) { $payload['category'] = $category; }
